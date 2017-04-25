@@ -76,13 +76,13 @@ O(n!) > O(2^n) > O(n^2) > O(n log n) > O(n) > O(log n) > O(1)
 
 * Binary Search - if array already sorted, you can find value fast
 
- * start at middle, check if value less than or greater than
+  * start at middle, check if value less than or greater than
 
- * chop array in half and go to middle of this half
+  * chop array in half and go to middle of this half
 
- * keep doing this until you get the value
+  * keep doing this until you get the value
 
- * this algorithm is ```O(log n)```
+  * this algorithm is ```O(log n)```
 
 ## Time Complexity vs. Space Complexity
 
