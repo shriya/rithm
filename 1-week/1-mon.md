@@ -1,6 +1,6 @@
 # Monday April 24 
 
-## Warm-Up
+## Warm Up
 
 ~~~~
 function addUpTo(num) {
@@ -95,6 +95,14 @@ O(n!) > O(2^n) > O(n^2) > O(n log n) > O(n) > O(log n) > O(1)
 * Red / Green / Refactor --> write tests that fail first, then write minimal code and fix until they're all green, then refactor if you want to make the code more efficient
 
 * ```deep.equal``` works with objects as well as arrays; it's about equivalent values whereas ```===``` is about locations in memory
+
+~~~~
+describe("Function I'm testing", function() {
+	it("thing testing", function() {
+		expect(func(argum)).to.equal(bool);
+	});
+});
+~~~~
 
 ## Exercises
 
