@@ -46,7 +46,7 @@
 
 * Hyper Text Transfer Protocal
 
-* Sending data from client to server - must be test 
+* Sending data from client to server - must be text 
 
   * HTML
 
@@ -163,7 +163,110 @@ fib(6);
 
   * Can go bottom-up -- tabulation (work upwards towars calculating)
 
-* Bring it to O(n)
+* We can bring it to O(n)
+
+### `palindrome` example
+
+~~~~
+function palindrome(str) {
+    if (str.length <= 1) {
+        return true;
+    } else if (str[0] !== str[str.length-1]) {
+        return false;
+    } else {
+        palindrome(str.slice(1, -1));
+    } 
+    return true;
+}
+
+palindrome("tacocat");
+~~~~
+
+### `every` function 
+
+* function called on an array; check if every element in the array meets some condition. 
+
+* the condition is a callback function
+
+* this already exists in JS but we were writing our own implementation
+
+* Normal every function: 
+
+~~~~
+[1, 2, 3, 4].every(function (value, index, array) {
+	return value > 3;
+});
+
+// false
+~~~~
+
+* Mine:
+
+~~~~
+function everyFunc(arr, cond) {
+    if (arr.length <= 0) {
+        return true;
+    } else if (!cond(arr[0])) {
+        return false;
+    } else {
+        return everyFunc(arr.slice(1), cond);
+    }
+}
+
+everyFunc([1, 2, 3], function(x) {
+    return x > 0;
+});
+
+everyFunc([1, 2, 3], function(x) {
+    return x > 6;
+});
+~~~~
+
+## Instructor Solutions from Elie
+
+~~~~
+function countDown(num){
+    if(num === 0) return;
+    console.log(num)
+    countDown(num-1)
+}
+
+function factorial(x){
+   if (x === 1 ) return 1;
+   return x * factorial(x-1);
+}
+
+function recursiveRange(x){
+   if (x === 0 ) return 0;
+   return x + recursiveRange(x-1);
+}
+
+function power(base, exponent){
+    if(exponent === 0) return 1;
+    return base * power(base,exponent-1);
+}
+
+function fib(n){
+    if (n <= 2) return 1;
+    return fib(n-1) + fib(n-2);
+}
+
+function reverse(str){
+    if(str.length <= 1) return str;
+    return reverse(str.slice(1)) + str[0];
+//     return str[str.length-1] + reverse(str.slice(0,-1))
+}
+
+function isPalendrome(str){
+    if(str.length === 1) return true;
+    if(str.length === 2) return str[0] === str[1];
+    if(str[0] === str.slice(-1)) return isPalendrome(str.slice(1,-1))
+    return false;
+}
+~~~~
+
+
+
 
 
 
@@ -186,7 +289,13 @@ fib(6);
 
 * Interviews in general - get comfortable with level 3 & 4 problems - good shape!!
 
-* [MPJ Videos - Recursion](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q)
+* [MPJ Videos - Functions, Recursion, Programming](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q)
+
+* Recursively reverse a string
+
+* O(n) algorithm for fibnnoaci sequence
+
+* Chrome console -- set breakpoints, put functions in "Watch", then click through the call stack
 
 * 
 
