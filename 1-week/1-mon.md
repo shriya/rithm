@@ -174,7 +174,7 @@ describe("Function I'm testing", function() {
 
 * Project Euler problems
 
-## Rithm topics for next few weeks
+## Coming up in remaining weeks
 
 * CS Big O & Recursion
 
