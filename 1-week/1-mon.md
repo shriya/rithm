@@ -104,9 +104,13 @@ describe("Function I'm testing", function() {
 });
 ~~~~
 
-## Exercises
+## Homework
 
 * fork & clone repo, push to my remote, make a pull req
+
+* [CS Fundamentals > Big O exercises](https://www.rithmschool.com/courses/javascript-computer-science-fundamentals/introduction-to-big-o-notation)
+
+* [Adv JS > Intro Testing w/ Mocha & Chai exercises](https://www.rithmschool.com/courses/advanced-javascript/introduction-to-testing-with-mocha-and-chai)
 
 ************************************
 
@@ -154,21 +158,17 @@ describe("Function I'm testing", function() {
 
 * **Try out HackerRank - stop being scared of it >:(**
 
-* [CS Fundamentals > Big O exercises](https://www.rithmschool.com/courses/javascript-computer-science-fundamentals/introduction-to-big-o-notation)
-
-* [Adv JS > Intro Testing w/ Mocha & Chai exercises](https://www.rithmschool.com/courses/advanced-javascript/introduction-to-testing-with-mocha-and-chai)
-
 * Write our own Kata on Codewars because you have to make a lot of tests
 
 * Try to write pseudocode & implement the sub-O(n^2) algorithm for stock price problem
 
- * [stack q](http://stackoverflow.com/questions/7086464/maximum-single-sell-profit)
+  * [stack q](http://stackoverflow.com/questions/7086464/maximum-single-sell-profit)
 
- * [another stack q](http://stackoverflow.com/questions/9514191/maximizing-profit-for-given-stock-quotes)
+  * [another stack q](http://stackoverflow.com/questions/9514191/maximizing-profit-for-given-stock-quotes)
 
- * [careercup q](https://careercup.com/question?id=9663203)
+  * [careercup q](https://careercup.com/question?id=9663203)
 
- * [geek something](http://www.geeksforgeeks.org/stock-buy-sell/)
+  * [geek something](http://www.geeksforgeeks.org/stock-buy-sell/)
 
 * functional programming!!! remember that!!!
 

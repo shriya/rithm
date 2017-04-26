@@ -155,7 +155,7 @@ function fib(n) {
 fib(6);
 ~~~~
 
-* This is O(2^n) -- *super* expensive; fib(50) will crash computer
+* This is O(2<sup>n</sup>) -- *super* expensive; fib(50) will crash computer
 
 * When you break a problem down into smaller sub-problems - dynamic programming
 
@@ -265,11 +265,25 @@ function isPalendrome(str){
 }
 ~~~~
 
+## Helper Method Recursion
 
+~~~~
+// remember a variable through each recursive call 
 
+function toughRecursiveProblem(input){
+    
+    var arrayToRemember = [];
+    
+    function helperFunction(){
+        arrayToRemeber.push('whatever');
+        return helperFunction(input);
+    }
 
+    helperFunction(input);
 
-
+    return arrayToRemember;
+}
+~~~~
 
 ************************************
 
@@ -281,7 +295,7 @@ function isPalendrome(str){
 
 * Cmd + D to find the next instance of word your cursor is on
 
-* 
+* Shift + Tab to do left / reverse tab
 
 ## To Do
 
@@ -298,6 +312,12 @@ function isPalendrome(str){
 * Chrome console -- set breakpoints, put functions in "Watch", then click through the call stack
 
 * 
+
+## Coming up this week
+
+* Tomorrow - map, for each, etc. lots of JS functions
+
+* Thurs - DOM Manipulation, HTML Canvas
 
 
 
