@@ -5,7 +5,7 @@
 * Things to keep in mind (my submission vs. Matt's solution):
   * Save lengths in "long" and "short" variables instead of repeating the same code twice with two different if statements
 
-## (ES2015)[https://www.rithmschool.com/courses/advanced-javascript-part-2]
+## [ES2015](https://www.rithmschool.com/courses/advanced-javascript-part-2)
 * ES2015 is also called ES6 
 * Before, we had ES5 
 
@@ -158,6 +158,21 @@ function extra(num1, num2, ...nums) {
 // gives you all of the "rest" of the args in an array
 ```
 
+* `spread` operator used when calling function, not defining
+* kind of the "reverse" of `spread`
+
+```
+function add(a,b,c,d) {
+	return a + b + c + d;
+}
+> add(1,2,3,4)
+>> 10
+
+> add(...[1,2,3,4])
+>> 10
+// "spreads" out the array of arguments into the individual arguments
+```
+
 ###  destructuring assignments
 * 
 
@@ -176,7 +191,7 @@ function extra(num1, num2, ...nums) {
 
 ## To Do
 
-* Elie comments on Github commit 
+* Refactor old assignments to fix Elie's comments on my old Github pull request!
 * 
 
 ## Coming up this week

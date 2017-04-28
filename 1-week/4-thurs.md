@@ -25,8 +25,20 @@
 
 * Check out mine on my personal site [here](http://shriyanevatia.com/shapes_game/index.html)
 
+## Turning Shapes Game into Tap Tap Revolution
+* Transform up arrow indices by flipping x and y coordinates across the relevant axes i.e. 90 degree rotation is flip across x=y (on normal coordinate plane; this one is diff with (0,0) in upper left)
+	* Remove the rotation crap
+* Only clear screen up to y = 650px (right above 4 bottom arrows) each time a new arrow is drawn
+* But still clear entire screen when game is over
+* Add neon border around arrows
+* Get each arrow to fall at random rate (within fast range)
+* Update score logic for clicking within 5px (or less) of target
+* Add glow CSS around arrow when near target (and stronger glow when **exactly** on target)
+* Add patterned background for whole game
+* Add way to get +5 for perfect, +3 for great, +1 for good
 
-
+**ABOVE & BEYOND**
+* Get free game song and match arrows drawn to game rhythm
 
 ************************************
 
