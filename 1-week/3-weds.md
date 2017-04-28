@@ -2,7 +2,7 @@
 
 ## Warm Up
 
-* ### [Snail Sort](https://www.codewars.com/kata/snail/train/javascript) 
+* ### [Snail Sort on Codewars](https://www.codewars.com/kata/snail/train/javascript) 
 	* `shift` (remove top row) -- or `concat`: 
 	  * `[].concat([1, 2])` ==> `[1, 2]` 
 	  * `[].push([1, 2])` ==> `[[1, 2]]` -- we don't want this extra dimension
@@ -46,6 +46,7 @@
   * returns `true` or `false` (instead of -1) 
   * newer to JS
   * also `O(n)`
+  * you can run `includes` on a string, too!!
 
 #### lastIndexOf
   * searches from the end of the array for a value, and gets the index of that one
@@ -93,7 +94,7 @@ arr.map(function(value, index, array) {
 #### filter
   * Callback function in filter must return `true` or `false`
   * Don't use `if` statements in filter (that's the whole point)
-  * `filter` returns an array (same or different length)
+  * `filter` returns an **array** (same or different length)
 
 ~~~~
 // Return array of only odd values
@@ -150,29 +151,164 @@ findMatt();
 #### findIndex
   * has a callback function; this is difference between `indexOf` and `findIndex` 
 
-#### every
-
 #### reduce
 
+~~~~
+["Elie", "Matt", "Tim", "Janey"].reduce(function(previousValue, nextValue) {
+	return previousValue;
+})
+// "Tim"
+~~~~
+
+* `accumulator` is also called `previousValue`
+* `curr` is also called `nextVal`
+
+* `reduce` does NOT go in order -- whatever you return from the callback becomes the `previousValue` the next time
+* ONLY the `nextValue` is going to iterate through the array
+
+* `reduce` itself returns the final value of `previousValue`
+
+* Can pass a second argument to reduce; think of this as "initial `previousValue`"
+
+~~~~
+["Elie", "Matt", "Tim", "Janey"].reduce(function(previousValue, nextValue) {
+	return previousValue + " " + nextValue;
+}, "The Rithm Team Includes: ")
+// "The Rithm Team Includes: Elie Matt Time Janey"
+~~~~
+
+* think of **reducing an array into something else**; ex. reduce array into string
+* good for summing up numbers in an array, or building up a concatenated string
+
+* if you don't `return` anything from the callback function, `previousValue` becomes `undefined`
+
+#### every
 
 ## Imperative vs. Declarative
 
 * Imperative: start at Rithm school, then take a left, walk 3 blocks, take a right, etc...then end at 1170 Wash
-
   * explains every step
-
 * Declarative: start at Rithm school, go to 1170 Wash 
-
   * assumes you know how to meet the goal based on initial state
 
+## Binary Search
+* `[1, 2, 3, 4, 5, 6, 7]`
+* `function binarySearch(arr, val);`
+* Find the midpoint of the Math.floor(arr.length/2);
+* Test if value is equal to this value (or the one to the right);
+  * `val === arr[middle]  return middle`
+  * `val < arr[middle]`  call again on left half
+  * `val > arr[middle]`  call again on right half
+  * if not found, `return -1`
+* This loses the indices, so instead:
+  * `function binarySearch(arr, val, start, end) {}`
+  * `start = start || 0` first time you call it, start is undefined; undefined is falsey so first time, skips to 0
+  * `end = end || array.length` first time you call it, end is undefined; undefined in falsey so first time, skips to array.length - 1
+  * **short circuiting** - assigning something to `(thing || otherThing)` - assigning conditionally 
+  * **JS specific thing** - that you can define the function with 4 arguments, but call it with only 2 
+  * `binarySearch(arr, val)`
+* Always need some midpoint 
+  * `var mid = Math.floor((start + end) / 2);`
 
+~~~~
+function binarySearch(arr, val, start, end) {
+	start = start || 0;
+	end = end || arr.length;
+	var mid = Math.floor((start+end)/2);
+	if(arr[mid] === val) return mid;
+	if(arr[mid] < val) {
+		binarySearch(arr, val, mid+1, end);
+	}
+	if(arr[mid] > val) {
+		binarySearch(arr, val, start, mid-1);
+	}
+	return -1;
+}
+~~~~
 
+## Vowel Count
 
+~~~~
+function vowelCount(str) {
+	var newObj = {}; 
+	var vowels = "aeoiu";
+	for (var i = 0; i < str.length; i++) {
+		if(str[i] in newObj) {
+			newObj[str[i]]++;
+		} else {
+			newObj[str[i]] = 1;
+		}
+	}
+}
+~~~~
 
+* **The following doesn't work yet** 
 
+~~~~
+function vowelCount(str) {
+	var newObj = {}; 
+	var vowels = "aeoiu";
+	for (var i = 0; i < str.length; i++) {
+		// short circuiting answer
+		if () {
+			newObj[str[i]] = (newObj[str[i]] || 0) + 1; 
+			// finds first truthy thing // otherwise if all falsey, assigns to last value
+		}
+	}
+}
+~~~~
 
+~~~~
+function vowelCount(str) {
+	return str.split("").filter(function(val) {
+		return "aeiou".includes(val);
+	}).reduce(function(acc,curr){
+		return accumulator[current] = (accumulator[current] || 0) + 1; 
+		// finds first truthy thing // otherwise if all falsey, assigns to last value
+	}, {})
+}
+~~~~
 
+## Partition 
 
+~~~~
+// Idea 1
+
+function partition(arr) {
+	// even case
+	var evens = arr.filter(function(val){
+		return (val % 2 === 0);
+	}).reduce(function(acc, curr) {
+		return acc.concat(curr);
+    }, [])
+	// odd case 
+	var odds = arr.filter(function(val){
+		return (val % 2 === 1);
+	}).reduce(function(acc, curr) {
+		return acc.concat(curr);
+    }, [])	
+    return [odds, evens];
+}
+
+partition([1, 2, 3, 4, 5, 6]);
+~~~~
+
+~~~~
+// Idea 2
+function partition(arr) {
+	return arr.reduce(function(acc, curr, ind, arr) {
+        if (curr % 2 === 0) {
+            acc[0].push(curr);
+            return acc;
+        } else if (curr % 2 === 1) {
+            acc[1].push(curr);
+            return acc;
+        }
+    }, [[],[]]);
+}
+
+partition([1, 2, 3, 4, 5, 6]);
+~~~~
 
 ************************************
 
@@ -184,7 +320,9 @@ findMatt();
 
 * Binary search is `O(log n)` but it has to be sorted
 
-* 
+* Look up Regular Expressions
+
+* In github, type `t` to look up a specific filename
 
 ## To Do
 
@@ -192,9 +330,25 @@ findMatt();
 
 * Return array with only odd values imperatively, declaratively, and recursively
 
+* Fill in `every` and `findIndex` above
+
+* Figure out how to short circuit stuff with `||`
+
+## Homework Still Pending
+
+* Monday: mergeObjects function
+
+* Tuesday: All bonus functions
+
+* Weds: Everything
+
 * 
 
 ## Coming up this week
+
+* Tomorrow: Canvas, vanilla JS / DOM manipulation review
+
+* Fri: ES2015, recap of week
 
 * Outco happy hour this Fri evening
 

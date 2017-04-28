@@ -14,6 +14,13 @@ _Please ignore the random ideas, links, thoughts, etc. at the bottom of each day
 
 * [Tues Apr 25](https://github.com/shriya/rithm/blob/master/1-week/2-tues.md)
 
+* [Weds Apr 26](https://github.com/shriya/rithm/blob/master/1-week/3-weds.md)
+
+* [Thurs Apr 27](https://github.com/shriya/rithm/blob/master/1-week/4-thurs.md)
+
+* [Fri Apr 28](https://github.com/shriya/rithm/blob/master/1-week/5-fri.md)
+
+
 ### Week 2
 
 ### Week 3
