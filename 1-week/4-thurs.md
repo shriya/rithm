@@ -37,7 +37,7 @@
 * Add patterned background for whole game
 * Add way to get +5 for perfect, +3 for great, +1 for good
 
-**ABOVE & BEYOND**
+#### Above and Beyond
 * Get free game song and match arrows drawn to game rhythm
 
 ************************************
