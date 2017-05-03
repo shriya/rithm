@@ -53,26 +53,5 @@ $blocks.on('click', function(e) {
 * form submissions in JS: **need** to make sure you don't refresh on submit: `e.preventDefault();`
 * 
 
-************************************
-
-## Questions 
-
-* 
-
-## Ideas & Notes
-
-* 
-
-## To Do
-
-* 
-
-## Coming up this week
-
-* 
-
-
-
-
 
 
