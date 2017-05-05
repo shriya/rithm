@@ -173,7 +173,6 @@ function bind(fn, thisArg) {
 ```
 
 * put potentially unknown arguments at the end of the argument list when defining the function, so that you can update it later
-* 
 
 ### 4) 
 
@@ -288,8 +287,6 @@ for (let val of arr) {
 }
 ```
 
-
-
 ## To Do
 
 * [Iterable Protocol & Iterator Protocol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
@@ -301,6 +298,8 @@ for (let val of arr) {
 * Watch tons of [JS Videos on YouTube](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q/playlists)
 
 * [Currying](https://medium.com/@kbrainwave/currying-in-javascript-ce6da2d324fe) / [More](https://medium.com/@kevincennis/currying-in-javascript-c66080543528) / [And More](https://www.sitepoint.com/currying-in-functional-javascript/) / [Even more](http://www.crockford.com/javascript/www_svendtofte_com/code/curried_javascript/index.html) / [Ok enough](http://blog.carbonfive.com/2015/01/14/gettin-freaky-functional-wcurried-javascript/)
+
+* [console.dir()](https://developer.mozilla.org/en-US/docs/Web/API/Console/dir) -- [more info](http://stackoverflow.com/questions/11954152/whats-the-difference-between-console-dir-and-console-log)
 
 ## Coming up this week
 
