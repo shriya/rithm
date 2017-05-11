@@ -40,6 +40,8 @@ def validBraces(string):
 * use BeautifulSoup to parse the HTML into readable data
 * User Agent - [header with info about you](http://www.whoishostingthis.com/tools/user-agent/)
 
+## SVGs 
+
 
 
 
