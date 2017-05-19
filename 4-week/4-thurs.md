@@ -50,7 +50,8 @@
 * don't do DDL outside of migration files; these files must be the single source of truth
 * can try to migrate, and if there are no changes it will say `No changes in schema detected.`
 * we can do DML locally because this is just dummy data --> long tangent about data not being consistent but data's structure being consistent
-* 
+* `python manage.py db history`
+* changing relationships (`db.relationship`) doesn't actually change anything in the migration; this is all in the ORM - not changing structure of data at all. no changes in schema
 
 
 ************************************
