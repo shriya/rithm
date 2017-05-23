@@ -35,6 +35,11 @@
 * show up on a page, then when you move to diff page - gone
 * need to put `get_flashed_messages()` in html files - comes with Flask 
 
+### Heroku Stuff
+
+* heroku run ipython
+* heroku pg:psql
+
 ************************************
 
 ## Questions 
