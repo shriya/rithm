@@ -30,9 +30,16 @@
 * `form.validate()` checks that all form inputs are valid and that the csrf tokens match
 * "Cross-Site Request Forgery (CSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated. CSRF attacks specifically target state-changing requests, not theft of data, since the attacker has no way to see the response to the forged request."
 
+## Assessment Notes
+
+* 300 status codes are redirects
+* Response header location tells the browser where to redirect to if there's a redirect
+* the salt is a string added to the hash to add randomness - it makes reverse-engineering the hash harder 
+* 
+
 ## Next Week's Web Project
 
-* 
+* [Full stack project guidelines!](https://github.com/rithmschool/fullstack_project)
 
 
 ************************************
