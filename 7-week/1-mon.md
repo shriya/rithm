@@ -76,7 +76,75 @@ app.get('/', function(req,responseFromExpress){
 		* ORMs with Node - Waterline, Bookshelf, and Sequelize
 		* easier to get up & running quickly than Postgres & SQL & SQLAlchemy
 		* in a large application you will use multiple databases
-		* 
+* ODM - MongoDB Object Document Manager - If you use [Mongoose](http://mongoosejs.com/docs/guide.html), you need a Scema! whaaat?!
+* after making the Schema, export a model
+* `global` object is like `window` - but we don't have `window` in node; everything is attached to `global`
+* other object we have with node is `process`
+* `process.env` returns an object with a bunch of environment variables
+
+## Sharing Code w/ Imports & Exports
+
+* use modules (import/export) to share code between files because we don't have `<script> tags` because we don't have HTML 
+* you can overwrite module.exports when you're exporting one single thing; but if you are exporting 2 functions - you put the whole thing into an object   
+* define all as `exports.functionName` to make them externally visible via requiring that file
+
+```
+// helper.js
+
+exports.add = function(a,b){
+  return a+b;
+}
+exports.subtract = function(a,b){
+  return a-b;
+}
+exports.multiply = function(a,b){
+  return a*b;
+}
+exports.divide = function(a,b){
+  return a/b;
+}
+
+// 1 - overwrite
+// module.exports = add
+// 2 - set as object
+// module.exports = {
+//   add,
+//   subtract,
+//   multiply,
+//   divide
+// }
+```
+
+```
+// main.js
+
+var helperFunctions = require('./helper')
+
+console.log(helperFunctions)
+```
+
+## Express Apps
+
+* CRUD on a resource w/ an array as storage
+* Yarn is a more modern package manager for node modules; similar to npm
+* venv - virtual env - folder with dependencies; virtual environments in flask were an abstraction - so now we have a huge modules folder
+* but I don't want to put my node modules on github!! 
+* the node version of 'ipython' -- `eval(require("locus"))`
+* node version of `debug = True` is `nodemon`
+* `res.locals` are variables that can be used in our templates
+* `res.locals.name = "shriya"` makes `res.locals` into `{name: "shriya"}`
+
+## Middleware
+
+* request comes in, middleware modifies that request, then response is sent back
+* create new error - app.use at the bottom of the file in case none of the other routes were found
+* any time you do `app.use` you're using additional middleware
+* if you want to write your own middleware, you have to tell node what to do `next` 
+* middleware is like a decorator!!! before you run each function, run this other thing first
+* if you pass a string into next(), the FIRST parameter of the next function of middleware will contain the value that came from that next; this is how the error handling works!
+* if you don't pass in a first param, it doesn't get propogated to the next piece of middleware -- can't just have req,res,next!! 
+
+
 
 
 ************************************
