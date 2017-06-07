@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 
 ## Mongo & Mongoose
 
-* check the mongoose crud app folder!!
+* check the [mongoose crud app folder!!](https://github.com/elie/mongoose-crud/tree/async-functions)
 
 ************************************
 

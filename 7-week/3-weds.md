@@ -18,7 +18,43 @@
 
 ## Express App with JSON API
 
-* (following along with app from lecture)
+* (following along with [app from lecture)](https://github.com/elie/ajax-crud)
+* [refactor of yesterday's app with async stuff](https://github.com/elie/mongoose-crud/blob/async-functions/app.js)
+
+## Object Destructuring
+
+```
+var obj = {
+    name: "Elie",
+    moreData: {
+        evenMoreData: {
+            homeTown: "NJ",
+            wiseMan: "Tobi",
+            hasBeans: false
+        }
+    }
+}
+
+//
+
+var {homeTown:a, wiseMan:b, hasBeans:c} = obj.moreData.evenMoreData
+```
+
+## React!!!!!!
+
+* [Intro to React!!!](https://www.rithmschool.com/courses/react-fundamentals/introduction-to-react)
+
+```
+div(attributes, children)
+
+React.createElement(type/component, props, children)
+
+// think of attributes as same as props
+// and children as same as children
+// type/component is name of component like SuperSweetComponent
+```
+
+* each `return` statement has to have one root element -- doesn't have to be a div but it can't be two things
 
 
 ************************************
