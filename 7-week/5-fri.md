@@ -14,7 +14,7 @@
 
 ## More ES2015 Weirdness
 
-*  
+* to evaluate a variable as an object key, put it in `[]` 
 
 ************************************
 
