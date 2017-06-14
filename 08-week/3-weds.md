@@ -50,6 +50,13 @@ const AuthButton = withRouter( props => (
 * Rendering a `<Redirect>` will navigate to a new location, overriding the current location in the history stack. 
 * props on this component include `to`, whose value is the path/URL or object to redirect to
 
+```
+<Redirect to={{
+	pathname: '/login',
+	state: { from: props.location }
+}}/>
+```
+
 ### Link
 
 * Provides declarative, accessible navigation around your application

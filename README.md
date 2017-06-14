@@ -96,7 +96,7 @@ _Please ignore the random ideas, links, thoughts, etc. at the bottom of each day
 
 * [Tue Jun 13](https://github.com/shriya/rithm/blob/master/8-week/2-tues.md)
 
-* [Wed ]()
+* [Wed Jun 14](https://github.com/shriya/rithm-notes/blob/master/08-week/3-weds.md)
 
 * [Thu ]()
 
