@@ -73,9 +73,52 @@ window.history.pushState(state, "title not used right now", "yoyo.html");
 * The `Route` React component (which you need to `npm install` and then `import` to use) tells the router which route triggers which component loading on the page! First few props we are using are `path` which gives the string path (ex. `'/'`), and `component` which is a component like `{About}`
 * We use the `Link` React component instead of `<a>` tags for routes; they have the prop `to` which we use like this: `<li><Link to="/about">About</Link></li>`
 * Whenever you click on a `Link` component, react uses `window.history` to change the url in the address bar. The `Route` component renders the component specified in the `component` attribute whenever the current url path matches the path attribute. 
+* you need to include the `exact` attribute if the path has to match exactly; `<Route exact path="/" component={Home}/>`
 
+### Destructuring component arguments
 
+when you use a stateless functional component, the first argument will refer to that component’s props. You can use destructuring of the component’s arguments to specify specific props that you care about. So
 
+```
+const Instructor = ({ match, location }) => {
+  // doing some stuff
+}
+```
+
+is equivalent to:
+
+```
+const Instructor = props => {
+  let match = props.match;
+  let location = props.location
+}
+```
+
+is equivalent to:
+
+```
+const Instructor = props => {
+  let { match, location } = props;
+}
+```
+
+Similarly, `const { name } = match.params` is equivalent to `const name = match.params.name`
+
+### Destructuring arrays
+
+```
+var result = "ll_0_2".split('_');
+// result is an array ["ll", "0", "2"];
+
+var [quadrant] = result
+// quadrant is "ll"
+```
+
+## URL Parameters 
+
+* the React Router gives us 
+	* a `match` object to access dynamic URL parameters
+	* a `location` object that lets us access values in the query string
 
 ************************************
 
