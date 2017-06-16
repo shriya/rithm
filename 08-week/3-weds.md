@@ -125,7 +125,7 @@ arr.forEach(function(val,idx,arr){
 #### `map`
 
 * structure is same as forEach; first parameter is a callback, with up to 3 parameters: value at current index, current index, and array itself
-* returns a new array of values returned in the callback.
+* returns a new array of values based on callback function results.
 
 ```
 var arr = [1,2,3,4];

@@ -2,18 +2,19 @@
 
 ## Warm Up
 
-* Instead, Outco practice problem 4pm-5pm
-* frequency hash (object)
-* finding intersection of frequency hashes
+* Nothing in morning, Instead, Outco practice problem 4pm-5pm
+* Things to look up & get comfortable with: 
+	* frequency hash (object) - ex. `{a:4, b:2, c:1, d:6}`
+	* finding intersection of frequency hashes
 
 ## React + Redux App Example
 
-* makeup app - clicking on brand name fires a GET request for all product with a brand
+* makeup app - clicking on brand name fires a GET request for all products with that brand name
 * can add to shopping cart, see things in cart, and remove from cart
 * state that is shared between the routes (`/brand`, `/brand/:brand`, `/cart`) - what you're going to buy 
 * boilerplate for react router: in index.js, wrap `<App />` with `<Route>`
 * render `/brands` and `/cart` as routes; make sure `/` redirects to `/brands`
-* components are cart & brandPage - stateless functional components that we aren't using outside of MainContent component 
+* components are `cart` & `brandPage` - stateless functional components that we aren't using outside of `MainContent` component 
 * the `render` prop on `<Route>` should be used on a stateless functional component rather than `component` prop because otherwise it will unmount & remount each component (and refresh the pg)
 * reducers: get props `state` and `action` 
 
@@ -123,7 +124,7 @@ function TodoList() {
 }
 ```
 
-* functions as children - props.children works like other props: 
+* functions as children - `props.children` works like other props: 
 
 ```
 // Calls the children callback numTimes to produce a repeated component
@@ -204,9 +205,9 @@ console.log(b); // 20
 #### Tic Tac Toe
 
 * [Tic Tac Toe Tutorial](https://facebook.github.io/react/tutorial/tutorial.html) - finishing tutorial
-* when rendering a list of items (with `<li>`s), react stores info about each item in the list. when updating the list, React needs to determine what has changed -- React has to have a `key` property on each element in the list 
-* **it cannot be referenced with `this.props.key`; it's something React uses automatically when deciding which children to update -- Reach maintains the state of items that were not modified and only updates the one(s) with matching key(s)**
-* they don't have to be globally unique, just unique relative to immediate siblings
+* When rendering a list of items (with `<li>`s), react stores info about each item in the list. when updating the list, React needs to determine what has changed -- React has to have a `key` property on each element in the list 
+* **The key cannot be referenced with `this.props.key`; it's something React uses automatically when deciding which children to update -- Reach maintains the state of items that were not modified and only updates the one(s) with matching key(s)**
+* The keys don't have to be globally unique, just unique relative to immediate siblings
 
 ************************************
 

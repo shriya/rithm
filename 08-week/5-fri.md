@@ -20,6 +20,10 @@
 
 ## Reviewing Old React Stuff So I'm Less Confused
 
+#### Functional Programming in Javascript
+
+
+
 
 
 
