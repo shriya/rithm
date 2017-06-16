@@ -96,9 +96,9 @@
 
 * [Wed Jun 14](https://github.com/shriya/rithm-notes/blob/master/08-week/3-weds.md)
 
-* [Thu Jun 15]()
+* [Thu Jun 15](https://github.com/shriya/rithm-notes/blob/master/08-week/4-thurs.md)
 
-* [Fri Jun 16]()
+* [Fri Jun 16](https://github.com/shriya/rithm-notes/blob/master/08-week/5-fri.md)
 
 ### Week 9
 
