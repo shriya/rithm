@@ -43,7 +43,7 @@ _notes on my own after lecture_
 * the DOM `window` object has a `history` object that allows you to access the browser history
 * to go back a page, `window.history.back();`
 * to go forward a page, `window.history.forward();`
-* to go to a specific point, the current page is index 0 and to go back x, write -x, or forward x, write x -- `window.history.go(x)`
+* to go to a specific point, the current page is index 0 and to go back x, write `-x` (ex. `-3`), or forward x, write `x` (ex. `2`) -- `window.history.go(x)`
 * to find how many pages are in the history stack, look at its length property -- `window.history.length`
 * `history.pushState()` allows you to add history entries
 * `pushState()` takes 3 parameters - state object, title, and URL.
