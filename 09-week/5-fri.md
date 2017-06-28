@@ -1,4 +1,6 @@
-#
+# Friday June 23
+
+* No notes; just working on back end of app w/ Matt
 
 ************************************
 

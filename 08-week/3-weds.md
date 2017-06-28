@@ -22,7 +22,7 @@
 
 example: 
 
-```
+```javascript
 const AuthButton = withRouter( props => (
   fakeAuth.isAuthenticated ? (
     <p>
@@ -42,7 +42,7 @@ const AuthButton = withRouter( props => (
 * Rendering a `<Redirect>` will navigate to a new location, overriding the current location in the history stack. 
 * props on this component include `to`, whose value is the path/URL or object to redirect to
 
-```
+```javascript
 <Redirect to={{
 	pathname: '/login',
 	state: { from: props.location }
@@ -74,7 +74,7 @@ const AuthButton = withRouter( props => (
 
 * Rest & Spread for objects are useful to get remaining keys & values in React: 
 
-```
+```javascript
 // REST
 let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
 console.log(x); // 1
@@ -88,7 +88,7 @@ console.log(n); // { x: 1, y: 2, a: 3, b: 4 }
 
 * You can use the [rest/spread operators on objects](https://github.com/tc39/proposal-object-rest-spread)
 
-```
+```javascript
 {routes.map((route, i) => (
   <RouteWithSubRoutes key={i} {...route}/>
   
@@ -100,7 +100,7 @@ console.log(n); // { x: 1, y: 2, a: 3, b: 4 }
 // we need a key any time we have an array of values so that React can iterate through that array
 ```
 
-```
+```javascript
 let aClone = { ...a };
 
 // is the same as: 
@@ -114,7 +114,7 @@ let aClone = Object.assign({}, a);
 * first parameter is a callback, with up to 3 parameters: value at current index, current index, and array itself
 * always returns `undefined`
 
-```
+```javascript
 var arr = [1,2,3,4];
 arr.forEach(function(val,idx,arr){ 
 	console.log(val);
@@ -127,7 +127,7 @@ arr.forEach(function(val,idx,arr){
 * structure is same as forEach; first parameter is a callback, with up to 3 parameters: value at current index, current index, and array itself
 * returns a new array of values based on callback function results.
 
-```
+```javascript
 var arr = [1,2,3,4];
 arr.map(function(val, index, array){
 	return val * 2;
@@ -144,7 +144,7 @@ var tripledValues = arr.map(function(val,index,arr){
 * inside the callback, you must `return` an expression that evaluates to `true` or `false` (a boolean); if it "passes" (is true), it's added to the return array. Otherwise, it is not.
 * an array of the filtered values is returned from `filter`
 
-```
+```javascript
 var arr = [1,2,3,4];
 arr.filter(function(val){
 	return val > 2;
@@ -163,7 +163,7 @@ arr.filter(function(val){
 * can pass in second parameter AFTER callback, which will be the initial value before iteration has started
 * otherwise, it will assume first element of the array is the initial value and start itation from the second
 
-```
+```javascript
 var arr = [2,4,6,8];
 arr.reduce(function(acc,next){
 	return acc + next;
@@ -175,7 +175,7 @@ arr.reduce(function(acc,next){
 * you can obtain different data types by changing the initial value of the accumulator
 * reducing an array to an object: 
 
-```
+```javascript
 var arr = [1,2,3,4,5,6];
 
 arr.reduce(function(acc,next) {

@@ -18,7 +18,7 @@
 * the `render` prop on `<Route>` should be used on a stateless functional component rather than `component` prop because otherwise it will unmount & remount each component (and refresh the pg)
 * reducers: get props `state` and `action` 
 
-```
+```javascript
 const rootReducer = (state = DEFAULT_STATE, action) => {
 	switch (action.type) 
 }
@@ -62,7 +62,7 @@ const rootReducer = (state = DEFAULT_STATE, action) => {
 * Capitalized types indicate that the JSX tag is referring to a React component.
 * These tags get compiled into a direct reference to the named variable, so if you use the JSX `<Foo />` expression, `Foo` must be in scope.
 
-```
+```javascript
 // using Dot Notation to access components
 
 import React from 'react';
@@ -84,7 +84,7 @@ function BlueDatePicker() {
 
 * String literals don't need the {}: 
 
-```
+```javascript
 <MyComponent message="hello world" />
 
 // is the same as
@@ -94,7 +94,7 @@ function BlueDatePicker() {
 
 * You can use the ... (spread operator) to pass in the whole props object if you already have it: 
 
-```
+```javascript
 function App1() {
   return <Greeting firstName="Ben" lastName="Hector" />;
 }
@@ -109,7 +109,7 @@ function App2() {
 
 * passing in JS expressions as children by wrapping in {}: 
 
-```
+```javascript
 function Item(props) {
   return <li>{props.message}</li>;
 }
@@ -126,7 +126,7 @@ function TodoList() {
 
 * functions as children - `props.children` works like other props: 
 
-```
+```javascript
 // Calls the children callback numTimes to produce a repeated component
 function Repeat(props) {
   let items = [];
@@ -151,7 +151,7 @@ function ListOfTenThings() {
 
 * [MDN Arrow Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 
-```
+```javascript
 // Parenthesize the body of function to return an object literal expression:
 params => ({foo: bar})
 
@@ -170,7 +170,7 @@ f();
 * [Rest parameters on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 * Rest parameters can be destructured
 
-```
+```javascript
 function f(...[a, b, c]) {
   return a + b + c;
 }
@@ -184,7 +184,7 @@ f(1, 2, 3, 4) // 6 (the fourth parameter is not destructured)
 
 * [MDN Destructuring Assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
-```
+```javascript
 var a, b, rest;
 [a, b] = [10, 20];
 console.log(a); // 10
